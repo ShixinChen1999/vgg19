@@ -9,7 +9,7 @@ from tqdm import tqdm
 
 from vgg import VGG
 
-BATCH_SIZE = 256  # 论文256
+BATCH_SIZE = 64  # 论文256
 LR = 0.01  # 论文 0.01
 WEIGHT_DECAY = 0.0005
 MOMENTUM = 0.9

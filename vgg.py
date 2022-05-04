@@ -1,13 +1,16 @@
 import torch
 from torch import nn
-
+#python 的标准库手册推荐在任何情况下尽量使用time.clock().
+#只计算了程序运行CPU的时间，返回值是浮点数
+import time
 
 # VGG19
 class VGG(nn.Module):
     def __init__(self, num_labels=1000):
         super(VGG, self).__init__()
         self.features = nn.Sequential(
-            nn.Conv2d(in_channels=3, out_channels=64, kernel_size=(3, 3), stride=1, padding=1),
+            
+	    nn.Conv2d(in_channels=3, out_channels=64, kernel_size=(3, 3), stride=1, padding=1),
             nn.ReLU(),
             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=(3, 3), stride=1, padding=1),
             nn.ReLU(),
